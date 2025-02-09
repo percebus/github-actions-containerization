@@ -1,0 +1,19 @@
+name: Test actions/scan-image
+on:
+  push:
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+# NOTE: Fixes "Error: Resource not accessible by integration"
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  default:
+    name: default
+    runs-on: ubuntu-latest
+    steps:
+      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: ./.github/actions/scan-image
+        with:
+          image_tag: "node:23"
