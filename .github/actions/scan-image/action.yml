@@ -1,5 +1,5 @@
-name: docker build target
-description: docker build target and scan image
+name: scan-image
+description: scan and upload image vulnerabilities as SARIF
 
 # NOTE: Fixes "Error: Resource not accessible by integration"
 # permissions:
