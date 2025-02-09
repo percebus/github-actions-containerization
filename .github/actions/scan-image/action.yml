@@ -16,6 +16,16 @@ inputs:
     required: false
     default: "false"
 
+  severity-cutoff:
+    description: The minimum severity level to report
+    required: false
+    default: "high"
+
+  only-fixed:
+    description: Only report vulnerabilities that have been fixed
+    required: false
+    default: "false"
+
 runs:
   using: composite
 
@@ -26,6 +36,8 @@ runs:
       with:
         image: ${{ inputs.image_tag }}
         fail-build: ${{ inputs.fail-build }}
+        severity-cutoff: ${{ inputs.severity-cutoff }}
+        only-fixed: ${{ inputs.only-fixed }}
         output-format: sarif
 
     - name: Upload SARIF
