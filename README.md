@@ -1,2 +1,7 @@
 # github-actions-containerization
+
+[LICENSE](./LICENSE.md)
+
+[![[C]ontinuous [I]ntegration](https://github.com/percebus/github-actions-containerization/actions/workflows/always.yml/badge.svg)](https://github.com/percebus/github-actions-containerization/actions/workflows/always.yml)
+
 github reusable actions &amp; workflows for containerization
