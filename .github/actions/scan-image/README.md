@@ -2,7 +2,10 @@
 
 [`LICENSE`](./LICENSE)
 
-A wrapper for `scan-action` + `codeql-action`'s `upload-sarif`
+A wrapper for
+
+1. `scan-action`
+1. `codeql-action`'s `upload-sarif`
 
 ## References
 
