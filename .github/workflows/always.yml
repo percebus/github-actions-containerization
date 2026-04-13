@@ -9,6 +9,7 @@ permissions:
 
 jobs:
   lint:
+    name: npm
     uses: percebus/github-actions-npm/.github/workflows/run_script.yml@main
     with:
       script: lint
@@ -25,9 +26,9 @@ jobs:
       matrix:
         language:
           - actions
-          - javascript
+          # - javascript # TODO? or XXX? no js code
 
-    name: "CodeQL: ${{ matrix.language }}"
+    name: CodeQL analyze
     uses: percebus/github-actions-compliance/.github/workflows/codeql_analyze.yml@main
     with:
       language: ${{ matrix.language }}
